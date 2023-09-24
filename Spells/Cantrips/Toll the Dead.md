@@ -1,14 +1,14 @@
 # Toll the Dead
 *Necromancy Spell*
-Spell Rank: Cantrip
-Casting Time: 1 action
-Range: 60 ft.
-Components: V, S
-Duration: Instantaneous
+**Spell Rank**: Cantrip
+**Casting Time**: 1 action
+**Range**: 60 ft.
+**Components**: V, S
+**Duration**: Instantaneous
 
 ---
 
-You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a **Wisdom saving throw** or take **1d8 necrotic damage**. If the target is missing any of its hit points, it instead takes **1d12 necrotic damage**.
+You point at one creature you can see within **Range**, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a **Wisdom saving throw** or take **1d8 necrotic damage**. If the target is missing any of its hit points, it instead takes **1d12 necrotic damage**.
 
 ---
 

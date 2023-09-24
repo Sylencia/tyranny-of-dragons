@@ -1,10 +1,10 @@
 # {{title}}
 *School Spell*
-Spell Rank: 
-Casting Time: 
-Range: 
-Components: 
-Duration: 
+**Spell Rank**: 
+**Casting Time**: 
+**Range**: 
+**Components**: 
+**Duration**: 
 
 ---
 

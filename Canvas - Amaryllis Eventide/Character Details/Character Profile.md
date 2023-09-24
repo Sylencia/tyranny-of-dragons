@@ -11,6 +11,6 @@ cssclasses:
 | Domain     | **Twilight Domain**            |
 | Background | **Anthropologist**             |
 | Age        | **35**                         |
-| Height     | **3'1"**                       |
-| Weight     | **x lbs**                      |
+| Height     | **3'1" (94 cm)**                       |
+| Weight     | **41 lb (18.6 kg)**                      |
 | Alignment  | **Lawful Good**                |

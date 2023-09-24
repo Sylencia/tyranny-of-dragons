@@ -1,10 +1,10 @@
 # Cure Wounds
 *Evocation Spell*
-Spell Rank: 1st 
-Casting Time: 1 action
-Range: Touch
-Components: V, S
-Duration: Instantaneous
+**Spell Rank**: 1st 
+**Casting Time**: 1 action
+**Range**: Touch
+**Components**: V, S
+**Duration**: Instantaneous
 
 ---
 

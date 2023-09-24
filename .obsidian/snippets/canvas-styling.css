@@ -1,6 +1,8 @@
 /* DISABLE CANVAS NODES THAT DON'T REQUIRE INTERACTION (for UX purposes) */
 .canvas-node:has(.profile),
 .canvas-node:has(.main-stat),
+.canvas-node:has(.extra-actions-bg),
+.canvas-node:has(.character-traits-bg),
 .canvas-node:has(.notes) {
   pointer-events: none;
 }
@@ -13,6 +15,8 @@
 .canvas-node:has(.callout[data-callout-metadata~="level"]) .canvas-node-resizer,
 .canvas-node:has(.callout[data-callout-metadata~="inspiration"])
   .canvas-node-resizer,
+  .canvas-node:has(.callout[data-callout-metadata~="death-saves"])
+  .canvas-node-resizer,
 .canvas-node:has(.callout[data-callout-metadata~="proficiency"])
   .canvas-node-resizer,
 .canvas-node:has(.callout[data-callout-metadata~="hit-dice"])
@@ -21,30 +25,20 @@
 .canvas-node:has(.callout[data-callout-metadata~="init"]) .canvas-node-resizer,
 .canvas-node:has(.callout[data-callout-metadata~="cp"]) .canvas-node-resizer,
 .canvas-node:has(.callout[data-callout-metadata~="sp"]) .canvas-node-resizer,
-.canvas-node:has(.callout[data-callout-metadata~="ep"]) .canvas-node-resizer,
 .canvas-node:has(.callout[data-callout-metadata~="gp"]) .canvas-node-resizer,
 .canvas-node:has(.callout[data-callout-metadata~="pp"]) .canvas-node-resizer,
 .canvas-node:has(.profile-img) .canvas-node-resizer,
-.canvas-node:has(.deathsaves) .canvas-node-resizer,
-.canvas-node:has(.notes) .canvas-node-resizer,
-.canvas-node:has(.risklevel) .canvas-node-resizer,
-.canvas-node:has(.profile) .canvas-node-resizer,
-.canvas-node:has(.hitdice) .canvas-node-resizer {
+.canvas-node:has(.profile) .canvas-node-resizer {
   display: none;
 }
 /* DISABLE LINKING OF NODES THAT DON'T REQUIRE LINKING (for UX purposes) */
-.canvas-node:has(.tilingpaper) .canvas-node-connection-point,
 .canvas-node:has(.spell-list) .canvas-node-connection-point,
-.canvas-node:has(.engagementthreats) .canvas-node-connection-point,
 .canvas-node:has(.inventory) .canvas-node-connection-point {
   display: none;
 }
 
 /* DISABLE CONTENT BLOCKER FOR NODES THAT REQUIRE DIRECT (1-click) interaction/hover events */
-.canvas-node:has(.deathsaves) .canvas-node-content-blocker,
-.canvas-node:has(.enhancements) .canvas-node-content-blocker,
-.canvas-node:has(.spell-list) .canvas-node-content-blocker,
-.canvas-node:has(.hitdice) .canvas-node-content-blocker {
+.canvas-node:has(.spell-list) .canvas-node-content-blocker {
   display: none;
 }
 
@@ -143,7 +137,7 @@ img {
 
 /* PROFILE */
 .canvas-node:has(.profile) {
-  z-index: 1 !important;
+  z-index: 3 !important;
 }
 
 .profile p {
@@ -159,27 +153,9 @@ img {
   filter: drop-shadow(2px 2px 4px #111);
 }
 
-/* EXTRA TRAITS */
-.canvas-node:has(.extra-traits) {
-  z-index: 0 !important;
-}
-
-.extra-traits p {
-  margin: 0;
-}
-.callout[data-callout-metadata~="extra-traits"] {
-  overflow: visible;
-}
-.callout[data-callout-metadata~="extra-traits"] .callout-content {
-  width: fit-content;
-  position: relative;
-  width: 1000px;
-  filter: drop-shadow(2px 2px 4px #111);
-}
-
 /* CHARACTER NAME */
 .canvas-node:has(.chararacter-name) {
-  z-index: 2 !important;
+  z-index: 10 !important;
 }
 
 .callout[data-callout-metadata~="character-name"] {
@@ -193,7 +169,7 @@ img {
 
 /* CHARACTER PROFILE */
 .cavnas-node:has(.character-profile) {
-  z-index: 2 !important;
+  z-index: 10 !important;
 }
 
 .character-profile .markdown-preview-section {
@@ -208,7 +184,7 @@ img {
 
 /* MAIN STAT AREA */
 .canvas-node:has(.main-stat) {
-  z-index: 3 !important;
+  z-index: 5 !important;
   transform: rotate(3deg);
 }
 .main-stat p {
@@ -277,6 +253,7 @@ img {
 .canvas-node:has(.callout[data-callout-metadata~="temp-hp"]),
 .canvas-node:has(.callout[data-callout-metadata~="level"]),
 .canvas-node:has(.callout[data-callout-metadata~="inspiration"]),
+.canvas-node:has(.callout[data-callout-metadata~="death-saves"]),
 .canvas-node:has(.callout[data-callout-metadata~="proficiency"]),
 .canvas-node:has(.callout[data-callout-metadata~="hit-dice"]),
 .canvas-node:has(.callout[data-callout-metadata~="ac"]),
@@ -290,6 +267,7 @@ img {
 .callout[data-callout-metadata~="temp-hp"],
 .callout[data-callout-metadata~="level"],
 .callout[data-callout-metadata~="inspiration"],
+.callout[data-callout-metadata~="death-saves"],
 .callout[data-callout-metadata~="proficiency"],
 .callout[data-callout-metadata~="hit-dice"],
 .callout[data-callout-metadata~="ac"],
@@ -306,6 +284,7 @@ img {
 .callout[data-callout-metadata~="temp-hp"] .callout-title,
 .callout[data-callout-metadata~="level"] .callout-title,
 .callout[data-callout-metadata~="inspiration"] .callout-title,
+.callout[data-callout-metadata~="death-saves"] .callout-title,
 .callout[data-callout-metadata~="proficiency"] .callout-title,
 .callout[data-callout-metadata~="hit-dice"] .callout-title,
 .callout[data-callout-metadata~="ac"] .callout-title,
@@ -345,27 +324,13 @@ img {
   transform: rotate(10deg);
 }
 
-.callout[data-callout-metadata~="inspiration"] .callout-title-inner {
-  transform: rotate(-20deg);
-}
-
-/* ABILITY DETAILS */
-.canvas-node:has(.callout[data-callout-metadata~="abilitydetails"]) {
-  transform: rotate(3deg);
-}
-.callout[data-callout-metadata~="abilitydetails"] > .callout-content {
-  color: #000;
-  font-family: "tox_typewriterregular";
-  line-height: 16pt;
-  font-size: 15pt;
-}
-.callout[data-callout-metadata~="abilitydetails"] p {
-  margin: 0;
+.callout[data-callout-metadata~="death-saves"] .callout-title-inner {
+  transform: rotate(-10deg);
 }
 
 /* PROFILE IMAGE */
 .canvas-node:has(.profile-img) {
-  z-index: 4 !important;
+  z-index: 10 !important;
 }
 
 .profile-img p {
@@ -412,290 +377,9 @@ img {
   background-size: 100% 100%;
 }
 
-/* NOTES */
-
-.canvas-node:has(.notes) {
-  z-index: 2 !important;
-  transform: rotate(-10deg);
-}
-
-.notes p {
-  margin: 0;
-}
-
-img[alt="notes"] {
-  width: 450px;
-  pointer-events: none;
-  filter: drop-shadow(1px 1px 3px #111);
-}
-
-/* DEATH SAVES */
-.canvas-node:has(div.deathsaves) {
-  transform: rotate(-16deg);
-  z-index: 9999 !important;
-}
-
-.canvas-node:has(div.deathsaves),
-.canvas-node-container:has(div.deathsaves),
-.canvas-node-content:has(.deathsaves),
-.markdown-embed-content:has(.deathsaves),
-div.deathsaves,
-div.deathsaves .callout,
-div.deathsaves .callout-content {
-  border-radius: 50%;
-  pointer-events: none;
-  padding: 0px !important;
-}
-
-div.deathsaves .markdown-preview-section {
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-div.deathsaves p {
-  pointer-events: all;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0 !important;
-}
-
-div.deathsaves span {
-  border-radius: 50%;
-  pointer-events: all;
-}
-
-div.deathsaves .markdown-preview-sizer > div {
-  pointer-events: none;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.callout[data-callout-metadata~="deathsaves"] {
-  filter: drop-shadow(0px 0px 5px rgb(22, 22, 22));
-  z-index: 1;
-  width: 400px;
-  height: 400px;
-  overflow: visible;
-}
-
-.callout[data-callout-metadata~="deathsaves"] img {
-  position: absolute;
-  cursor: default;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-}
-.callout[data-callout-metadata~="deathsaves"] .callout-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  overflow: visible;
-}
-
-.callout[data-callout-metadata~="deathsaves"] .callout-content > p > span {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-}
-.callout[data-callout-metadata~="deathsaves"] .callout-content > p > label {
-  cursor: pointer;
-  position: absolute;
-  position: absolute;
-  opacity: 0;
-  z-index: 2;
-  transition: opacity, 0.25s;
-}
-.callout[data-callout-metadata~="deathsaves"] .callout-content > p > input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.callout[data-callout-metadata~="deathsaves"]
-  .callout-content
-  > p
-  > label:nth-child(4) {
-  top: 28px;
-  left: 69px;
-  width: 49px;
-  height: 49px;
-  background: url("https://i.imgur.com/kYrw6vT.png");
-  background-size: cover;
-}
-.callout[data-callout-metadata~="deathsaves"]
-  .callout-content
-  > p
-  > label:nth-child(7) {
-  top: 168px;
-  left: -5px;
-  width: 49px;
-  height: 49px;
-  background: url("https://i.imgur.com/kYrw6vT.png");
-  background-size: contain;
-  transform: rotate(-50deg);
-}
-.callout[data-callout-metadata~="deathsaves"]
-  .callout-content
-  > p
-  > label:nth-child(10) {
-  top: 319px;
-  left: 69px;
-  width: 49px;
-  height: 49px;
-  background: url("https://i.imgur.com/kYrw6vT.png");
-  background-size: contain;
-  transform: rotate(250deg);
-}
-.callout[data-callout-metadata~="deathsaves"]
-  .callout-content
-  > p
-  > label:nth-child(13) {
-  top: 319px;
-  left: 283px;
-  width: 49px;
-  height: 49px;
-  background: url("https://i.imgur.com/TmVzWTC.png");
-  background-size: contain;
-  transform: rotate(190deg);
-}
-.callout[data-callout-metadata~="deathsaves"]
-  .callout-content
-  > p
-  > label:nth-child(16) {
-  top: 168px;
-  left: 356px;
-  width: 49px;
-  height: 49px;
-  background: url("https://i.imgur.com/TmVzWTC.png");
-  background-size: contain;
-  transform: rotate(140deg);
-}
-.callout[data-callout-metadata~="deathsaves"]
-  .callout-content
-  > p
-  > label:nth-child(19) {
-  top: 28px;
-  left: 283px;
-  width: 49px;
-  height: 49px;
-  background: url("https://i.imgur.com/TmVzWTC.png");
-  background-size: contain;
-  transform: rotate(90deg);
-}
-#f1:checked + label,
-#f2:checked + label,
-#f3:checked + label,
-#s1:checked + label,
-#s2:checked + label,
-#s3:checked + label {
-  opacity: 1;
-}
-
-* {
-  --f1: 0;
-  --f2: 0;
-  --f3: 0;
-  --s1: 0;
-  --s2: 0;
-  --s3: 0;
-}
-
-#f1:checked
-  + label
-  + br
-  + input
-  + label
-  + br
-  + input
-  + label
-  + br
-  + input
-  + label
-  + br
-  + input
-  + label
-  + br
-  + input
-  + label
-  + br
-  + span
-  img {
-  --f1: 1;
-}
-#f2:checked
-  + label
-  + br
-  + input
-  + label
-  + br
-  + input
-  + label
-  + br
-  + input
-  + label
-  + br
-  + input
-  + label
-  + br
-  + span
-  img {
-  --f2: 1;
-}
-#f3:checked
-  + label
-  + br
-  + input
-  + label
-  + br
-  + input
-  + label
-  + br
-  + input
-  + label
-  + br
-  + span
-  img {
-  --f3: 1;
-}
-
-#s1:checked
-  + label
-  + br
-  + input
-  + label
-  + br
-  + input
-  + label
-  + br
-  + span
-  + br
-  + span
-  img {
-  --s1: 1;
-}
-#s2:checked + label + br + input + label + br + span + br + span img {
-  --s2: 1;
-}
-#s3:checked + label + br + span + br + span img {
-  --s3: 1;
-}
-
-img[alt~="failure"] {
-  opacity: calc(var(--f1) * var(--f2) * var(--f3)) !important;
-}
-
-img[alt~="success"] {
-  opacity: calc(var(--s1) * var(--s2) * var(--s3)) !important;
-}
-
 /* SPELL STATS */
 .canvas-node:has(.spell-list) {
-  z-index: 3 !important;
+  z-index: 15 !important;
 }
 
 .spell-list p {
@@ -823,70 +507,9 @@ img[alt~="success"] {
   pointer-events: none;
 }
 
-/* CHARACTER ASSESSMENT */
-.canvas-node:has(.assessment) {
-  z-index: 1 !important;
-}
-
-/* ENHANCEMENTS */
-.canvas-node:has(.enhancements) {
-  z-index: 4 !important;
-}
-
-/* DETAILS */
-.canvas-node:has(.details) {
-  z-index: 1 !important;
-}
-
-.tilingpaper .markdown-preview-section {
-  background: url("https://i.imgur.com/yhvtscC.png");
-  background-size: 100%;
-  filter: drop-shadow(1px 1px 4px #111) brightness(95%) sepia(20%);
-  font-family: "tox_typewriterregular";
-  line-height: 16pt;
-  color: #000;
-  --link-decoration: none;
-  --link-color: rgb(0, 0, 0);
-  --link-color-hover: rgb(184, 184, 184);
-}
-
-.tilingpaper a {
-  font-weight: 800;
-}
-
-.tilingpaper .markdown-preview-section {
-  padding-top: 10px;
-  width: 700px;
-}
-
-.tilingpaper .markdown-preview-section > div {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.callout[data-callout-metadata~="t-w"] table {
-  width: 100%;
-  margin: 0;
-}
-.callout[data-callout-metadata~="t-nh"] thead {
-  display: none !important;
-}
-.callout[data-callout-metadata~="t-nh"] table tbody tr:first-child td {
-  border-top: none;
-}
-
-.tilingpaper td {
-  padding-left: 10px !important;
-  font-size: 13pt;
-}
-
-.tilingpaper div {
-  --folding-offset: 0;
-}
-
 /* INVENTORY */
 .canvas-node:has(.inventory) {
-  z-index: 1 !important;
+  z-index: 0 !important;
 }
 
 .inventory {
@@ -961,82 +584,175 @@ img[alt~="success"] {
 .callout[data-callout-metadata~="gp"] .callout-title-inner,
 .callout[data-callout-metadata~="pp"] .callout-title-inner {
   padding-top: 21px;
-  font-family: "morsalregular", cursive;
-  font-size: 17pt;
+  font-family: "Dancing Script", cursive;
+  font-size: 24pt;
   font-weight: 800;
   margin: 0 auto;
   text-align: center;
   color: #000;
 }
 
-/* ENGAGEMENT THREATS */
-.canvas-node:has(.engagementthreats) {
+/* EXTRA TRAITS */
+.canvas-node:has(.extra-actions) {
+  z-index: 10 !important;
+}
+
+.canvas-node:has(.character-traits) {
+  z-index: 11 !important;
+}
+
+.canvas-node:has(.extra-actions-bg) {
   z-index: 1 !important;
 }
 
-.engagementthreats .markdown-preview-section {
-  width: 700px;
-  background: url("https://i.imgur.com/jxz716s.png");
-  background-size: 100%;
-  filter: drop-shadow(1px 1px 3px #111);
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  padding-top: 10px;
+.canvas-node:has(.extra-actions-bg) .canvas-node-container,
+.canvas-node:has(.extra-actions) .canvas-node-container {
+  transform: rotate(3deg);
 }
 
-.engagementthreats {
+.canvas-node:has(.character-traits-bg) {
+  z-index: 0 !important;
+}
+
+.canvas-node:has(.character-traits-bg) .canvas-node-container,
+.canvas-node:has(.character-traits) .canvas-node-container {
+  transform: rotate(-5deg);
+}
+
+.character-traits,
+.extra-actions {
   --folding-offset: 0;
+  --link-decoration-hover: none;
+  --link-color: rgb(172, 55, 0);
+  --link-color-hover: rgb(225, 150, 0);
 }
 
-.engagementthreats img {
+.character-traits img,
+.extra-actions img {
   width: 80%;
   padding-left: 5%;
 }
 
-.engagementthreats table {
-  width: 90%;
+.character-traits table,
+.extra-actions table {
+  width: 80%;
   margin: 0 auto;
 }
 
-.engagementthreats td {
-  font-family: "tox_typewriterregular";
+.character-traits td,
+.extra-actions td {
+  font-family: "Caslon Antique";
   color: #000;
   font-size: 12pt;
 }
 
-.engagementthreats th {
-  font-family: "times_new_roman_cyrregular";
+.character-traits th,
+.extra-actions th {
+  font-family: "Caslon Antique";
   color: #000 !important;
   border-left: none;
   border-right: none;
 }
 
-/* HIT DICE */
-.canvas-node:has(.hitdice) {
-  z-index: 9999 !important;
-  transform: rotate(20deg);
+.character-traits h1,
+.extra-actions h1 {
+  color: black;
+  margin: 8px 0 !important;
+  margin-left: 50px !important;
+  font-family: "Caslon Antique";
 }
-.dice-roller-button {
-  filter: drop-shadow(1px 1px 4px #111);
-  --image-width: 304px;
-  --image-height: 320px;
-  --scaling: 0.45;
-  opacity: 1;
-  width: calc(var(--image-width) * var(--scaling));
-  height: calc(var(--image-height) * var(--scaling));
+
+.page-bg p {
   margin: 0 !important;
-  background-image: url("https://i.imgur.com/JwcJBI2.png");
-  transition: opacity, 300ms;
-  background-size: contain;
-  transition-delay: 2s;
 }
-.dice-roller-button:active {
-  opacity: 0;
-  transition: opacity, 0ms;
+
+.callout[data-callout-metadata~=page-bg] {
+  overflow: visible;
 }
-.dice-roller-button * {
+.callout[data-callout-metadata~=page-bg] .callout-content {
+  width:fit-content;
+  position: relative;
+  width: 598px;
+  filter:drop-shadow(2px 2px 4px #111)
+}
+.callout[data-callout-metadata~=page-bg] img[alt=background] {
+  position: relative;
+  width: 100%;
+}
+
+/* SPELL SLOTS */
+.canvas-node:has(.spellslots) {
+  z-index: 20 !important;
+}
+
+.canvas-node:has(.spellslots) .canvas-node-container {
+  transform: rotate(-5deg);
+}
+
+.spellslots .markdown-preview-section {
+  max-width: 100%;
+  background:  url("https://imgur.com/hyAusmF.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.spellslots div.markdown-preview-section > div {
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.spellslots .collapse-indicator {
   display: none;
 }
-.dice-roller .dice-roller-result {
+
+/* Get rid of the parent bullet */
+.spellslots div.markdown-preview-section > div > ul > li > div.list-bullet {
+  display: none !important;
+}
+
+.spellslots input:checked:after {
+  content: 'a';
+}
+
+/* Remove the indentation guide lines */
+.spellslots.markdown-rendered.show-indentation-guide li > ul::before,
+.spellslots.markdown-rendered.show-indentation-guide li > ol::before {
+display: none;
+}
+
+div.markdown-preview-section > div > ul.has-list-bullet > li {
+  padding-left: 0px !important;
+  text-align: center;
+}
+
+.spellslots div > ul {
+  list-style: none;
+  display: flex;
+  column-gap: 10px;
+  flex-flow: row wrap;
+  font-family: "Caslon Antique";
+  color: black;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* TABLE MODIFICATIONS */
+
+.callout[data-callout-metadata~=t-w] table {
+  width: 100%;
+  margin: 0;
+}
+.callout[data-callout-metadata~=t-nh] thead {
+  display: none !important;
+}
+.callout[data-callout-metadata~=t-nh] table tbody tr:first-child td {
+  border-top: none;
+}
+
+.no-header th {
   display: none;
+}
+
+.no-header table tbody tr:first-child td {
+  border-top: none;
 }

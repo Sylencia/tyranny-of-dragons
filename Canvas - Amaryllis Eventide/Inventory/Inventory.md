@@ -1,18 +1,15 @@
 ---
 cssclasses: inventory
 ---
+![[Inventory.svg|foreground]]
 
 |                                  |         |
 | -------------------------------- | -------:|
-| **Money**                        |         |
-| Copper Pieces                    |       0 |
-| Silver Pieces                    |       0 |
-| Gold Pieces                      |       0 |
-| &nbsp;                           |         |
 | Warhammer                        |      x1 |
 | Scale Mail                       |      x1 |
 | Shield                           |      x1 |
 | Holy Amulet (Spellcasting Focus) |      x1 |
+| Potion of Healing                |      x1 | 
 | &nbsp;                           |         |
 | Rations                          | 10 days |
 | Herbalism Kit                    |      x1 |

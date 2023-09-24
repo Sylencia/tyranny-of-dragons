@@ -1,10 +1,10 @@
 # Guidance
 *Divination Spell*
-Spell Rank: Cantrip
-Casting Time: 1 action
-Range: Touch
-Components: V, S
-Duration: Up to 1 minute
+**Spell Rank**: Cantrip
+**Casting Time**: 1 action
+**Range**: Touch
+**Components**: V, S
+**Duration**: Up to 1 minute
 **Concentration**
 
 ---

@@ -1,17 +1,17 @@
 ---
 cssclasses:
-  - character-profile
+  - character-traits
+  - no-header
 ---
 
-> [!|t-w t-nh t-pt]
 |                             |                                               |
 | --------------------------- | --------------------------------------------- |
 | **Passive Perception**      | 14                                            |
 | **Passive Insight**         | 10                                            |
 | **Darkvision**              | 300 ft.                                       |
 | **Languages Known**         | Common, Halfling, Draconic, Dwarven           |
-| **Armor Proficiencies**     | Light, Medium, Heavy, Shields                          |
-| **Weapon Proficiencies** | Simple weapons, Martial weapons |
+| **Armor Proficiencies**     | Light, Medium, Heavy, Shields                 | 
+| **Weapon Proficiencies**    | Simple weapons, Martial weapons               |
 | **Lucky**                   | Reroll 1s and use the new roll.               |
 | **Brave**                   | Advantage against being frightened.           |
 | **Halfling Nimbleness**     | Can move through creatures larger than me.    |

@@ -1,14 +1,14 @@
 # Healing Word
 *Evocation Spell*
-Spell Rank: 1st 
-Casting Time: 1 bonus action
-Range: 60 ft.
-Components: V 
-Duration: Instantaneous
+**Spell Rank**: 1st 
+**Casting Time**: 1 bonus action
+**Range**: 60 ft.
+**Components**: V 
+**Duration**: Instantaneous
 
 ---
 
-A creature of your choice that you can see within range regains hit points equal to **1d4 + your spellcasting ability modifier**. This spell has no effect on undead or constructs.
+A creature of your choice that you can see within **Range** regains hit points equal to **1d4 + your spellcasting ability modifier**. This spell has no effect on undead or constructs.
 
 ---
 
