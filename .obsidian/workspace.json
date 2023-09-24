@@ -1,0 +1,241 @@
+{
+  "main": {
+    "id": "9516c5991940aec7",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa1eede67c4dfc14",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc0297dc4f249846",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Canvas - Amaryllis Eventide/Spells/Spells.md",
+                "mode": "preview",
+                "source": true
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "db1f188c46cfe5b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Canvas - Amaryllis Eventide/Inventory.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b25f7189cc573912",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7779afc0cb75909",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d2cc7c7e3076ca21",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a5572daa28ac517f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "47c1b2bfb943b315",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 213.5
+  },
+  "right": {
+    "id": "79d49d780d19f25e",
+    "type": "split",
+    "children": [
+      {
+        "id": "4f30a0af7f845861",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "adcdfef5d176f063",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Canvas - Amaryllis Eventide/Inventory.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3bfa3677f9c5076c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Canvas - Amaryllis Eventide/Inventory.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "45e383953bdc6b70",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "76a4d027bcdc3f64",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Canvas - Amaryllis Eventide/Inventory.md"
+              }
+            }
+          },
+          {
+            "id": "c8ed6b4baf4ec64d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          },
+          {
+            "id": "cbf7e5edd4a707f4",
+            "type": "leaf",
+            "state": {
+              "type": "DICE_ROLLER_VIEW",
+              "state": {}
+            }
+          },
+          {
+            "id": "3900d98b469690f3",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "db1f188c46cfe5b3",
+  "lastOpenFiles": [
+    "Untitled.canvas",
+    "Canvas - Amaryllis Eventide/Inventory.md",
+    "Amaryllis Eventide.md",
+    "Spells/1st/Detect Magic.md",
+    "Canvas - Amaryllis Eventide/Spells/Spells.md",
+    "Canvas - Amaryllis Eventide/Stats/Stats.md",
+    "Spells/1st/Sanctuary.md",
+    "Spells/1st/Guiding Bolt.md",
+    "Spells/1st/Command.md",
+    "Spells/1st/Bless.md",
+    "Spells/1st/Healing Word.md",
+    "Spells/Cantrips/Toll the Dead.md",
+    "Templates/Spell Template.md",
+    "Spells/Cantrips/Sacred Flame.md",
+    "Spells/Cantrips/Mage Hand.md",
+    "Spells/Cantrips/Guidance.md",
+    "Spells/1st/Faerie Fire.md",
+    "Spells/1st/Cure Wounds.md",
+    "Spells/1st/Sleep.md",
+    "Spells/1st",
+    "Spells/Cantrips",
+    "Templates/{{date}} - Session.md",
+    "Canvas - Amaryllis Eventide/Character Details/Character Traits.md",
+    "Canvas - Amaryllis Eventide/Spells",
+    "Canvas - Amaryllis Eventide/Character Details",
+    "Canvas - Amaryllis Eventide/Stats",
+    "Canvas - Amaryllis Eventide/Character Details/Extra Traits Background.md",
+    "Canvas - Amaryllis Eventide/Character Details/Character Profile.md",
+    "Canvas - Amaryllis Eventide/Character Details/Profile Image.md",
+    "Canvas - Amaryllis Eventide/Stats/Hit Dice.md",
+    "Canvas - Amaryllis Eventide/Stats/Initiative.md",
+    "Canvas - Amaryllis Eventide/Large Frame.png",
+    "Canvas - Amaryllis Eventide/Large Frame Vertical.png",
+    "Canvas - Amaryllis Eventide/info.svg",
+    "Canvas - Amaryllis Eventide/Profile Background.png",
+    "Canvas - Amaryllis Eventide/Abilities",
+    "Canvas - Amaryllis Eventide/Book.png",
+    "Canvas/big_gallery.png",
+    "Canvas/Name Frame.png",
+    "Canvas/inspiration.svg",
+    "Canvas/hp.svg",
+    "Canvas/speed.svg",
+    "Canvas/Large Frame.png.sb-829f7ed9-jc7uzv",
+    "Canvas - Amaryllis Eventide",
+    "Tooltips",
+    "Images"
+  ]
+}

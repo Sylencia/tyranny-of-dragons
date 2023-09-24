@@ -1,0 +1,4 @@
+---
+cssclasses: abilities
+---
+\- Saving Throw

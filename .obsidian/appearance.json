@@ -1,0 +1,13 @@
+{
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "center-image",
+    "center-header",
+    "center-title",
+    "center-table",
+    "canvas-styling",
+    "custom-fonts"
+  ],
+  "translucency": true,
+  "cssTheme": ""
+}
